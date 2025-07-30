@@ -3,15 +3,15 @@
     <div class="container-xl">
       <div class="row align-items-center">
         <div class="col-6 text-center px-4">
-          <h1 class="hero-title">Backlog.rip</h1>
+          <h1 class="hero-title">{{ $t('home.title') }}</h1>
 
           <p class="hero-description">
-            Free and open source library manager for all your games.
+            {{ $t('home.description1') }}
             <br />
-            All data is saved locally in your browser, without any cookies or trackers.
+            {{ $t('home.description2') }}
 
             <span style="display: block; margin: 15px">
-              Organize your library and games with ease.
+              {{ $t('home.description3') }}
             </span>
           </p>
 
@@ -20,13 +20,13 @@
               <div class="col-auto">&nbsp;</div>
               <div class="col-auto">
                 <v-btn to="import" color="purple" variant="flat">
-                  Import your library
+                  {{ $t('home.importLibrary') }}
                 </v-btn>
                 <!-- <b-btn to="import" color="purple" size="sm">Import your library</b-btn> -->
               </div>
 
               <div class="col-auto">
-                <v-btn to="games" color="secondary" variant="text">Browse games</v-btn>
+                <v-btn to="games" color="secondary" variant="text">{{ $t('home.browseGames') }}</v-btn>
                 <!-- <b-btn to="games" variant="ghost" size="sm" color="secondary">
                   Browse games
                 </b-btn> -->
@@ -178,7 +178,7 @@
                   fill-rule="nonzero"></path>
               </g>
             </svg>
-            Participate in the development!
+            {{ $t('home.participate') }}
           </a>
         </p>
       </div>
