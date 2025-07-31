@@ -68,6 +68,7 @@
             <p
               class="empty-subtitle text-secondary"
               v-html="$t('messages.libraryEmptySubtitle')"></p>
+            <p class="empty-subtitle text-secondary" v-html="$t('messages.libraryEmptySubtitle')"></p>
             <div class="empty-action">
               <b-btn to="/import" class="me-3">
                 <!-- <Icon>StepInto</Icon> -->
