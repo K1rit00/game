@@ -55,10 +55,9 @@
               </div>
             </div>
             <div v-if="step == 0">
-              <h1>Welcome to Backlog.rip</h1>
+              <h1>{{ $t('pages.welcomeTitle') }}</h1>
               <p>
-                With Backlog.rip you can organize, keep track of your progress and have a
-                single place for all your games.
+                {{ $t('pages.welcomeParagraph1') }}
               </p>
 
               <!-- <div class="card-body text-center my-5">
@@ -68,53 +67,37 @@
                 <div class="card-title mb-1">{{ $auth.user.username }}</div>
               </div> -->
 
-              <div class="btn w-100 my-4" @click="step++">Get started</div>
+              <div class="btn w-100 my-4" @click="step++">{{ $t('buttons.getStarted') }}</div>
             </div>
 
             <div v-if="step == 1">
-              <h1>Everything is yours</h1>
+              <h1>{{ $t('pages.everythingYours') }}</h1>
 
-              <p>
-                All data is stored in your browser, you own it and you can export, import
-                and modify it at any time.
-              </p>
-              <p>
-                With zero ads, zero tracking and zero bullshit, you can be sure that your
-                data is safe.
-              </p>
-              <div class="btn w-100 my-4" @click="step++">Continue</div>
+              <p>{{ $t('pages.welcomeParagraph2') }}</p>
+              <p>{{ $t('pages.welcomeParagraph3') }}</p>
+              <div class="btn w-100 my-4" @click="step++">{{ $t('buttons.continue') }}</div>
             </div>
 
             <div v-if="step == 2">
-              <h1>Bring your games</h1>
-              <p>
-                You can automatically import your library from Steam (Public profiles),
-                with more to come.
-              </p>
+              <h1>{{ $t('pages.bringYourGames') }}</h1>
+              <p>{{ $t('pages.welcomeParagraph4') }}</p>
 
-              <div class="btn w-100 my-4" @click="step++">Continue</div>
+              <div class="btn w-100 my-4" @click="step++">{{ $t('buttons.continue') }}</div>
             </div>
 
             <div v-if="step == 3">
-              <h1>Keep a journal</h1>
-              <p>
-                Everything you do is recorded automatically in your journal. But you can
-                add your own notes too.
-              </p>
-              <div class="btn w-100 my-4" @click="step++">Continue</div>
+              <h1>{{ $t('pages.keepAJournal') }}</h1>
+              <p>{{ $t('pages.welcomeParagraph5') }}</p>
+              <div class="btn w-100 my-4" @click="step++">{{ $t('buttons.continue') }}</div>
             </div>
 
             <div v-if="step == 4">
-              <h1>Your games, your way</h1>
-              <p>
-                You can manually add any games to your Backlog, even if you don't have
-                them in any library. Then, you can add a state to any game to keep track
-                of your progress.
-              </p>
-              <p>You start with 7 states, but you can modify them to fit your needs.</p>
+              <h1>{{ $t('pages.yourGamesYourWay') }}</h1>
+              <p>{{ $t('pages.welcomeParagraph6') }}</p>
+              <p>{{ $t('pages.welcomeParagraph7') }}</p>
               <b-btn to="import" class="btn btn-primary w-100 my-4">
                 <Icon class="me-2">ArrowsTransferDown</Icon>
-                Import your library
+                {{ $t('buttons.importLibrary') }}
               </b-btn>
             </div>
           </div>
@@ -136,8 +119,9 @@
 export default {
   name: 'Onboarding',
   setup() {
+    const { t } = useI18n()
     definePageMeta({
-      title: 'Welcome to Backlog.rip',
+      title: t('pages.welcomeTitle'),
     })
   },
   data() {

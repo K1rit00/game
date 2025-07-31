@@ -63,24 +63,20 @@
           style="border: 1px dashed #cccccc73; border-radius: 4px">
           <template v-if="isLibrary && stats.apps == 0">
             <p class="empty-title mb-3 font-serif" style="font-weight: 300">
-              Your library is empty
+              {{ $t('messages.libraryEmpty') }}
             </p>
-            <p class="empty-subtitle text-secondary">
-              You don't have any games in your library.
-              <br />
-              Try importing your Steam games or add any game you want from games page.
-            </p>
+            <p class="empty-subtitle text-secondary" v-html="$t('messages.libraryEmptySubtitle')"></p>
             <div class="empty-action">
               <b-btn to="/import" class="me-3">
                 <!-- <Icon>StepInto</Icon> -->
-                Import your library
+                {{ $t('buttons.importLibrary') }}
               </b-btn>
 
               <!-- <b-btn class="me-3" @click.stop="$mitt.emit('game:add')">
                 Manually add a game
               </b-btn> -->
 
-              <b-btn to="/games">Browse all games</b-btn>
+              <b-btn to="/games">{{ $t('buttons.browseAllGames') }}</b-btn>
             </div>
           </template>
 
@@ -104,14 +100,14 @@
                 justify-content: center;
               ">
               <p class="empty-title mb-3 font-serif" style="font-weight: 300">
-                Nothing found
+                {{ $t('messages.nothingFound') }}
                 <template v-if="f.string && f.string.length">
                   <strong>"{{ f.string }}"</strong>
                 </template>
                 <template v-else>with your filters</template>
               </p>
               <p class="empty-subtitle text-secondary">
-                We haven't found any games for the current search
+                {{ $t('messages.noGamesFound') }}
                 <template v-if="isLibrary">
                   You can either
                   <strong>Import your steam games</strong>
@@ -138,7 +134,7 @@
                 </b-btn>
 
                 <b-btn @click="$refs.filters.changeSource('all')">
-                  Search in all games
+                  {{ $t('buttons.searchAllGames') }}
                 </b-btn>
               </div>
 
@@ -149,15 +145,15 @@
                   ◈ Or you can ◈
                 </div>
                 <p class="empty-title mb-2 font-serif" style="font-weight: 300">
-                  Create your own game
+                  {{ $t('pages.createYourOwnGame') }}
                 </p>
                 <p class="empty-subtitle text-secondary">
-                  You can just create a game for yourself.
+                  {{ $t('pages.createYourOwnGameSubtitle') }}
                 </p>
                 <div class="empty-action mt-2">
                   <b-btn @click="createCustomGame">
                     <!-- <Icon>StepInto</Icon> -->
-                    Add a game "{{ f.string }}" to your library
+                    {{ $t('buttons.addGamePlaceholder', { title: f.string }) }}
                   </b-btn>
                 </div>
               </template>
