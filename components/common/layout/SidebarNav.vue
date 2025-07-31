@@ -12,7 +12,7 @@
       *| Explore
       *+--------------------------------- -->
     <span class="dropdown-header">
-      <span class="text-muted my-2">Explore</span>
+      <span class="text-muted my-2">{{ $t('menu.explore') }}</span>
     </span>
 
     <!-- <div class="dropdown-item disabled text-white">
@@ -23,28 +23,28 @@
       <span class="d-none nav-link-icon d-md-none d-lg-inline-block">
         <Icon size="16">Cards</Icon>
       </span>
-      <span class="nav-link-title">All games</span>
+      <span class="nav-link-title">{{ $t('menu.allGames') }}</span>
     </NuxtLink>
 
     <NuxtLink to="/genres" class="dropdown-item">
       <span class="d-none nav-link-icon d-md-none d-lg-inline-block">
         <Icon size="16">Triangle</Icon>
       </span>
-      <span class="nav-link-title">Genres</span>
+      <span class="nav-link-title">{{ $t('menu.genres') }}</span>
     </NuxtLink>
 
     <template v-if="$app.wip">
       <div class="dropdown-divider"></div>
 
       <span class="dropdown-header">
-        <span class="text-muted my-2">Community</span>
+        <span class="text-muted my-2">{{ $t('menu.community') }}</span>
       </span>
 
       <NuxtLink to="/community" class="dropdown-item">
         <span class="d-none nav-link-icon d-md-none d-lg-inline-block">
           <Icon size="16">Components</Icon>
         </span>
-        <span class="nav-link-title">Community</span>
+        <span class="nav-link-title">{{ $t('menu.community') }}</span>
       </NuxtLink>
     </template>
 
@@ -52,7 +52,7 @@
       <span class="d-none nav-link-icon d-md-none d-lg-inline-block">
         <Icon size="16">Components</Icon>
       </span>
-      <span class="nav-link-title">Dashboard</span>
+      <span class="nav-link-title">{{ $t('menu.dashboard') }}</span>
     </NuxtLink>
     <!--
 
@@ -72,7 +72,7 @@
               style="float: right; outline: none; transform: translateX(4px)"
               class="ms-auto text-secondary show-hover cursor-pointer"
               size="16"
-              v-tippy="'Create a new list'"
+              v-tippy="$t('tooltips.createList')"
               @click.prevent="$mitt.emit('list:create')">
               SquareRoundedPlus
             </Icon>
@@ -82,21 +82,21 @@
     <div class="dropdown-divider"></div>
 
     <span class="dropdown-header">
-      <span class="text-muted my-2">Your games</span>
+      <span class="text-muted my-2">{{ $t('labels.yourGames') }}</span>
     </span>
 
     <NuxtLink to="/library" class="dropdown-item control-hover">
       <span class="d-none nav-link-icon d-md-none d-lg-inline-block">
         <Icon size="16">LayoutDashboard</Icon>
       </span>
-      <span class="nav-link-title">Library</span>
+      <span class="nav-link-title">{{ $t('menu.library') }}</span>
 
       <small class="ms-auto text-secondary hide-hover">
         {{ format.num($app.count.library) }}
       </small>
 
       <Icon
-        v-tippy="'Configure'"
+        v-tippy="$t('tooltips.configure')"
         style="outline: none; transform: translateX(4px)"
         class="ms-auto me-1 text-secondary show-hover cursor-pointer"
         size="15"
@@ -110,14 +110,14 @@
         <Icon size="16">Mist</Icon>
       </span>
 
-      <span class="nav-link-title">Your lists</span>
+      <span class="nav-link-title">{{ $t('menu.yourLists') }}</span>
 
       <small class="ms-auto text-secondary hide-hover">
         {{ format.num($app.count.lists) }}
       </small>
 
       <Icon
-        v-tippy="'Create a new list'"
+        v-tippy="$t('tooltips.createList')"
         style="float: right; outline: none; transform: translateX(4px)"
         class="ms-auto me-1 text-secondary show-hover cursor-pointer"
         size="15"
@@ -135,7 +135,7 @@
         <span class="d-none nav-link-icon d-md-none d-lg-inline-block">
           <Icon size="16">Heart</Icon>
         </span>
-        <span class="nav-link-title me-4">Favorites</span>
+        <span class="nav-link-title me-4">{{ $t('menu.favorites') }}</span>
         <small v-if="$app.count.fav > 0" class="ms-auto text-secondary">
           {{ format.num($app.count.fav) }}
         </small>
@@ -148,7 +148,7 @@
           <Icon size="16">Bookmark</Icon>
         </span>
 
-        <span class="nav-link-title me-4">Pinned</span>
+        <span class="nav-link-title me-4">{{ $t('menu.pinned') }}</span>
         <small v-if="$app.count.pinned > 0" class="ms-auto text-secondary">
           {{ format.num($app.count.pinned) }}
         </small>
@@ -192,7 +192,7 @@
         <Icon size="16">Refresh</Icon>
       </span>
       <span class="nav-link-title">
-        Library sync
+        {{ $t('menu.librarySync') }}
         <!-- <Icon size="10" width="1" class="ms-1">Refresh</Icon> -->
       </span>
     </NuxtLink>

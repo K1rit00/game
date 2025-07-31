@@ -12,7 +12,7 @@
             <div class="card-body">
               <div class="row align-items-center">
                 <div class="col-8">
-                  <h3 class="card-title mb-1">Loading your account, please wait...</h3>
+                  <h3 class="card-title mb-1">{{ $t('messages.loadingAccount') }}</h3>
                   <div class="mt-3">
                     <div class="row g-2 align-items-center">
                       <div class="col">

@@ -103,13 +103,13 @@
 
   <div class="row mb-3">
     <div class="col-12">
-      <h2>Search something to add</h2>
+      <h2>{{ $t('labels.searchToAdd') }}</h2>
     </div>
 
     <div class="col-8">
       <v-text-field
         v-model="f.string"
-        placeholder="Search by name..."
+        :placeholder="$t('placeholders.searchByName')"
         clearable
         density="comfortable">
         <template #prepend-inner>

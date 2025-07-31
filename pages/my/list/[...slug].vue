@@ -8,7 +8,7 @@
             <div class="card">
               <div class="card-body">
                 <div class="d-flex align-items-center">
-                  <div class="subheader">Loading list</div>
+                  <div class="subheader">{{ $t('messages.loadingList') }}</div>
                 </div>
                 <div class="h3 m-0">
                   {{ list.name }}

@@ -2,12 +2,12 @@
   <div class="page-body">
     <div class="container">
       <template v-if="pending">
-        <div>Loading...</div>
+        <div>{{ $t('messages.loading') }}</div>
       </template>
 
       <template v-else-if="error">
-        <h1>Data Not Found</h1>
-        <p>Sorry, we couldn't find the data you're looking for.</p>
+        <h1>{{ $t('messages.dataNotFound') }}</h1>
+        <p>{{ $t('messages.dataNotFoundSubtitle') }}</p>
       </template>
 
       <template v-else-if="app">
@@ -53,19 +53,19 @@ watchEffect(() => {
 })
 
 useHead(() => ({
-  title: app.name ?? 'Data Not Found',
+  title: app.name ?? $t('messages.dataNotFound'),
   meta: [
     {
       name: 'description',
-      content: data.value?.description ?? 'Data not found',
+      content: data.value?.description ?? $t('messages.dataNotFound'),
     },
     {
       property: 'og:title',
-      content: data.value?.title ?? 'Data Not Found',
+      content: data.value?.title ?? $t('messages.dataNotFound'),
     },
     {
       property: 'og:description',
-      content: data.value?.description ?? 'Data not found',
+      content: data.value?.description ?? $t('messages.dataNotFound'),
     },
   ],
 }))

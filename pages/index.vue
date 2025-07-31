@@ -26,7 +26,9 @@
               </div>
 
               <div class="col-auto">
-                <v-btn to="games" color="secondary" variant="text">{{ $t('home.browseGames') }}</v-btn>
+                <v-btn to="games" color="secondary" variant="text">
+                  {{ $t('home.browseGames') }}
+                </v-btn>
                 <!-- <b-btn to="games" variant="ghost" size="sm" color="secondary">
                   Browse games
                 </b-btn> -->
@@ -64,7 +66,7 @@
               Join us at
 
               <a
-                v-tippy="'Join us at Discord'"
+                v-tippy="$t('tooltips.joinDiscord')"
                 href="https://discord.gg/F2sPE5B"
                 class="link-secondary link-underline-opacity-0 ms-2 mx-1"
                 target="_blank">

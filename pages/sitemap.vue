@@ -101,11 +101,11 @@ const { data } = await useAsyncData(
 )
 
 const staticLinks = [
-  { path: '/', name: 'Home' },
+  { path: '/', name: $t('breadcrumbs.home') },
   // { path: '/about', name: 'About' },
-  { path: '/games', name: 'Games' },
-  { path: '/genres', name: 'Genres' },
-  { path: '/sitemap', name: 'Sitemap' },
+  { path: '/games', name: $t('breadcrumbs.games') },
+  { path: '/genres', name: $t('breadcrumbs.genres') },
+  { path: '/sitemap', name: $t('breadcrumbs.sitemap') },
 ]
 
 // Non-reactive lists

@@ -6,7 +6,7 @@
           <ul class="navbar-nav">
             <li
               v-if="false"
-              v-tippy="{ content: 'Show Backlog menu', placement: 'bottom' }"
+              v-tippy="{ content: $t('tooltips.showMenu'), placement: 'bottom' }"
               class="nav-item cursor-pointer"
               @click="$app.toggleSidebar()">
               <span class="d-none nav-link-icon d-md-none d-lg-inline-block">
@@ -21,21 +21,21 @@
                 <!-- <span class="nav-link-icon d-md-none d-lg-inline-block">
                   <Icon>ChartBubble</Icon>
                 </span> -->
-                <span class="nav-link-title pe-2">Explore</span>
+                <span class="nav-link-title pe-2">{{ $t('menu.explore') }}</span>
               </div>
               <b-dropdown>
                 <NuxtLink to="/games" class="dropdown-item">
                   <span class="d-none nav-link-icon d-md-none d-lg-inline-block">
                     <Icon>Cards</Icon>
                   </span>
-                  <span class="nav-link-title">All games</span>
+                  <span class="nav-link-title">{{ $t('menu.allGames') }}</span>
                 </NuxtLink>
 
                 <NuxtLink to="/genres" class="dropdown-item">
                   <span class="d-none nav-link-icon d-md-none d-lg-inline-block">
                     <Icon>Triangles</Icon>
                   </span>
-                  <span class="nav-link-title">Genres</span>
+                  <span class="nav-link-title">{{ $t('menu.genres') }}</span>
                 </NuxtLink>
               </b-dropdown>
 
@@ -62,7 +62,7 @@
                 <span class="d-none nav-link-icon d-md-none d-lg-inline-block">
                   <Icon>LayoutDashboard</Icon>
                 </span>
-                <span class="nav-link-title">Dashboard</span>
+                <span class="nav-link-title">{{ $t('menu.dashboard') }}</span>
               </NuxtLink>
             </li>
 
@@ -71,7 +71,7 @@
                 <span class="d-none nav-link-icon d-md-none d-lg-inline-block">
                   <Icon>Apps</Icon>
                 </span>
-                <span class="nav-link-title">Library and backlog</span>
+                <span class="nav-link-title">{{ $t('menu.library') }}</span>
               </NuxtLink>
             </li>
 
@@ -80,7 +80,7 @@
                 <span class="d-none nav-link-icon d-md-none d-lg-inline-block">
                   <Icon>Notebook</Icon>
                 </span>
-                <span class="nav-link-title">Journal</span>
+                <span class="nav-link-title">{{ $t('menu.journal') }}</span>
               </NuxtLink>
             </li>
 
@@ -160,7 +160,7 @@
                     type="text"
                     class="form-control"
                     autocomplete="off"
-                    placeholder="Search anything…" />
+                    :placeholder="$t('placeholders.searchAnything')" />
                   <span class="input-group-text">
                     <kbd>CTRL K</kbd>
                   </span>
