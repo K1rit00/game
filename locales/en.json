@@ -1,4 +1,13 @@
 {
+  "buttons": {
+    "addGameManual": "Add a game manually",
+    "browseAllGames": "Browse all games",
+    "continue": "Continue",
+    "getStarted": "Get started",
+    "importLibrary": "Import your library",
+    "searchAllGames": "Search in all games",
+    "addGamePlaceholder": "Add a game \"{title}\" to your library"
+  },
   "home": {
     "browseGames": "Browse games",
     "description1": "Free and open source library manager for all your games.",
@@ -7,5 +16,38 @@
     "importLibrary": "Import your library",
     "participate": "Participate in the development!",
     "title": "Backlog.rip"
+  },
+  "messages": {
+    "libraryEmpty": "Your library is empty",
+    "libraryEmptySubtitle": "You don't have any games in your library.\nTry importing your Steam games or add any game you want from games page.",
+    "nothingFound": "Nothing found",
+    "nothingFoundSubtitle": "We couldn't find any results matching your search criteria.\nTry to change your search query or filters.",
+    "noGamesFound": "We haven't found any games for the current search"
+  },
+  "nav": {
+    "browseGames": "Browse games",
+    "importLibrary": "Import your library"
+  },
+  "pages": {
+    "bringYourGames": "Bring your games",
+    "everythingYours": "Everything is yours",
+    "games": "Games",
+    "genres": "Genres",
+    "keepAJournal": "Keep a journal",
+    "moreGames": "More Games",
+    "siteMap": "Site Map",
+    "videoGameGenres": "Video game genres",
+    "websitePages": "Website pages",
+    "welcomeParagraph1": "With Backlog.rip you can organize, keep track of your progress and have a single place for all your games.",
+    "welcomeParagraph2": "All data is stored in your browser, you own it and you can export, import and modify it at any time.",
+    "welcomeParagraph3": "With zero ads, zero tracking and zero bullshit, you can be sure that your data is safe.",
+    "welcomeParagraph4": "You can automatically import your library from Steam (Public profiles), with more to come.",
+    "welcomeParagraph5": "Everything you do is recorded automatically in your journal. But you can add your own notes too.",
+    "welcomeParagraph6": "You can manually add any games to your Backlog, even if you don't have them in any library. Then, you can add a state to any game to keep track of your progress.",
+    "welcomeParagraph7": "You start with 7 states, but you can modify them to fit your needs.",
+    "welcomeTitle": "Welcome to Backlog.rip",
+    "yourGamesYourWay": "Your games, your way",
+    "createYourOwnGame": "Create your own game",
+    "createYourOwnGameSubtitle": "You can just create a game for yourself."
   }
 }
