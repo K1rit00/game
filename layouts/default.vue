@@ -442,7 +442,7 @@
                       <NuxtLink
                         to="/import"
                         class="list-group-item list-group-item-action d-flex align-items-center">
-                        <span class="nav-link-title">Import your library</span>
+                        <span class="nav-link-title">{{ $t('nav.importLibrary') }}</span>
                       </NuxtLink>
                     </div>
                   </div>

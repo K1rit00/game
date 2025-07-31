@@ -3,7 +3,7 @@
     <div class="container-xl">
       <div class="row justify-content-center">
         <div class="col-12 col-md-6">
-          <h1>Video game genres</h1>
+          <h1>{{ $t('pages.videoGameGenres') }}</h1>
           <div style="display: flex; justify-content: space-evenly">
             <span>#</span>
             <template v-for="(letter, i) in alphabet" :key="i">
