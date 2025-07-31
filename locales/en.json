@@ -1,11 +1,11 @@
 {
   "home": {
-    "title": "Backlog.rip",
+    "browseGames": "Browse games",
     "description1": "Free and open source library manager for all your games.",
     "description2": "All data is saved locally in your browser, without any cookies or trackers.",
     "description3": "Organize your library and games with ease.",
     "importLibrary": "Import your library",
-    "browseGames": "Browse games",
-    "participate": "Participate in the development!"
+    "participate": "Participate in the development!",
+    "title": "Backlog.rip"
   }
 }
