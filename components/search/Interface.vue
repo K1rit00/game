@@ -65,6 +65,9 @@
             <p class="empty-title mb-3 font-serif" style="font-weight: 300">
               {{ $t('messages.libraryEmpty') }}
             </p>
+            <p
+              class="empty-subtitle text-secondary"
+              v-html="$t('messages.libraryEmptySubtitle')"></p>
             <p class="empty-subtitle text-secondary" v-html="$t('messages.libraryEmptySubtitle')"></p>
             <div class="empty-action">
               <b-btn to="/import" class="me-3">
@@ -130,7 +133,7 @@
               <div v-if="isLibrary" class="empty-action mt-3">
                 <b-btn to="/import" class="me-3">
                   <!-- <Icon>StepInto</Icon> -->
-                  Import your library
+                  {{ $t('buttons.importLibrary') }}
                 </b-btn>
 
                 <b-btn @click="$refs.filters.changeSource('all')">
