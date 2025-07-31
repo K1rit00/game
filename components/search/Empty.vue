@@ -2,36 +2,28 @@
   <div class="p-2">
     <div class="empty" style="border: 1px dashed #cccccc73; border-radius: 4px">
       <template v-if="preset == null">
-        <p class="empty-title">Your library is empty</p>
-        <p class="empty-subtitle text-secondary">
-          You don't have any games in your library.
-          <br />
-          Try importing your Steam games or add any game you want from games page.
-        </p>
+        <p class="empty-title">{{ $t('messages.libraryEmpty') }}</p>
+        <p class="empty-subtitle text-secondary" v-html="$t('messages.libraryEmptySubtitle')"></p>
         <div class="empty-action">
           <b-btn to="/import" color="primary" size="sm" class="me-3">
             <!-- <Icon>StepInto</Icon> -->
-            Import your library
+            {{ $t('buttons.importLibrary') }}
           </b-btn>
 
           <b-btn to="/import" color="primary" size="sm" class="me-3">
             <!-- <Icon>StepInto</Icon> -->
-            Add a game manually
+            {{ $t('buttons.addGameManual') }}
           </b-btn>
 
           <b-btn to="/games" variant="ghost" size="sm" color="secondary">
-            Browse all games
+            {{ $t('buttons.browseAllGames') }}
           </b-btn>
         </div>
       </template>
 
       <template v-if="preset == 'filtering'">
-        <p class="empty-title">Nothing found</p>
-        <p class="empty-subtitle text-secondary">
-          We couldn't find any results matching your search criteria.
-          <br />
-          Try to change your search query or filters.
-        </p>
+        <p class="empty-title">{{ $t('messages.nothingFound') }}</p>
+        <p class="empty-subtitle text-secondary" v-html="$t('messages.nothingFoundSubtitle')"></p>
       </template>
     </div>
   </div>
@@ -56,7 +48,7 @@ export default {
 
     title: {
       type: String,
-      default: 'Your library is empty',
+      default: () => useI18n().t('messages.libraryEmpty'),
     },
   },
 

@@ -4,13 +4,13 @@
       <div class="row justify-content-center">
         <div class="col-12">
           <div class="d-flex align-items-center mb-4">
-            <h1 class="h1 mb-0">Site Map</h1>
+            <h1 class="h1 mb-0">{{ $t('pages.siteMap') }}</h1>
           </div>
 
           <div class="row g-4">
             <!-- Static Links Column -->
             <div class="col-12 col-md-4">
-              <h2 class="mb-2">Website pages</h2>
+              <h2 class="mb-2">{{ $t('pages.websitePages') }}</h2>
               <div class="card me-4">
                 <div class="list-group list-group-hoverable card-list-group">
                   <a
@@ -38,7 +38,7 @@
 
             <!-- Genres Column -->
             <div class="col-12 col-md-4">
-              <h2 class="mb-2">Genres</h2>
+              <h2 class="mb-2">{{ $t('pages.genres') }}</h2>
               <ul class="list-unstyled">
                 <li v-for="genre in genres" :key="genre.id" class="game-item mb-2">
                   <a :href="genre.path" class="sitemap-link">
@@ -53,7 +53,7 @@
 
             <!-- First Games Column -->
             <div class="col-12 col-md-4">
-              <h2 class="mb-2">Games</h2>
+              <h2 class="mb-2">{{ $t('pages.games') }}</h2>
               <ul class="list-unstyled">
                 <li v-for="game in firstGames" :key="game.url" class="game-item mb-2">
                   <a :href="game.url" class="sitemap-link">
@@ -69,7 +69,7 @@
 
           <!-- Remaining Games Grid -->
           <div v-if="remainingGames.length" class="mt-5">
-            <h2 class="mb-2">More Games</h2>
+            <h2 class="mb-2">{{ $t('pages.moreGames') }}</h2>
             <div class="games-grid">
               <div v-for="game in remainingGames" :key="game.url" class="game-item">
                 <a :href="game.url" class="sitemap-link">

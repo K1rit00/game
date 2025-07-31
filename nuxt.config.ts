@@ -64,6 +64,7 @@ export default defineNuxtConfig({
 
     'vue-sonner/nuxt',
     'vuetify-nuxt-module',
+    '@nuxtjs/i18n',
   ],
 
   // Auto import pinia stores
@@ -141,6 +142,16 @@ export default defineNuxtConfig({
     name: 'Backlog.rip',
     description: 'Free and open source library manager for all your games.',
     defaultLocale: 'en', // not needed if you have @nuxtjs/i18n installed
+  },
+
+  i18n: {
+    locales: [
+      { code: 'en', file: 'en.json', name: 'English' },
+      { code: 'ru', file: 'ru.json', name: 'Русский' },
+    ],
+    defaultLocale: 'en',
+    langDir: 'locales/',
+    lazy: true,
   },
 
   webpack: {
