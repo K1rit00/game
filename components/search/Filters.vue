@@ -44,7 +44,7 @@
         ">
         <v-btn><Icon>Clock</Icon></v-btn>
         <v-btn
-          v-tippy="'Run via Steam '"
+          v-tippy="$t('tooltips.runViaSteam')"
           :href="'steam://run/'"
           slim
           style="height: 36px; min-width: 0">
@@ -130,7 +130,7 @@
             v-if="showEnterHint"
             class="text-muted small text-nowrap"
             style="letter-spacing: normal; font-size: 11px; font-family: monospace">
-            Enter to search
+            {{ $t('labels.enterToSearch') }}
           </kbd>
         </template>
       </v-text-field>
@@ -226,7 +226,7 @@
       <v-btn class="me-2">Random</v-btn> -->
 
       <v-btn
-        v-tippy="'Display results as a list'"
+        v-tippy="$t('tooltips.showList')"
         icon
         variant="text"
         size="x-small"
@@ -236,7 +236,7 @@
       </v-btn>
 
       <v-btn
-        v-tippy="'Display results as a grid of covers'"
+        v-tippy="$t('tooltips.showGrid')"
         icon
         variant="text"
         size="x-small"
@@ -246,7 +246,7 @@
       </v-btn>
 
       <v-btn
-        v-tippy="'Get a random game from this list'"
+        v-tippy="$t('tooltips.randomGame')"
         icon
         variant="text"
         size="x-small"
@@ -288,7 +288,7 @@
             width="55"
             class="ms-1"
             style="margin-right: -5px"
-            alt="Link to the Steam Homepage" />
+            :alt="$t('tooltips.steamHomepage')" />
         </a>
 
         <span

@@ -59,7 +59,7 @@
             type="text"
             class="form-control form-control-flush"
             :class="{ disabled: ui.showMods }"
-            placeholder="Search..." />
+            :placeholder="$t('placeholders.search')" />
         </div>
         <div class="dropdown-divider"></div>
       </template>

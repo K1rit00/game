@@ -2,16 +2,16 @@
   <b-dialog
     ref="dialog"
     v-model="ui.show"
-    title="New journal entry"
-    subtitle="Lorem ipsum dolor"
+    :title="$t('labels.newJournalEntry')"
+    :subtitle="$t('labels.additionalInfo')"
     :loading="ui.loading"
     @save="submit">
     <div class="mb-3 align-items-end">
-      <label class="form-label">Title</label>
+      <label class="form-label">{{ $t('labels.title') }}</label>
       <b-input v-model="item.title" type="text" class="form-control" />
     </div>
     <div>
-      <label class="form-label">Additional info</label>
+      <label class="form-label">{{ $t('labels.additionalInfo') }}</label>
       <textarea v-model="item.note" class="form-control" name="note" rows="3"></textarea>
     </div>
   </b-dialog>

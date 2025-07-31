@@ -6,6 +6,7 @@
     "getStarted": "Начать работу",
     "importLibrary": "Импортировать библиотеку",
     "searchAllGames": "Искать во всех играх",
+    "viewAll": "Показать все",
     "addGamePlaceholder": "Добавить игру \"{title}\" в библиотеку"
   },
   "home": {
@@ -49,5 +50,71 @@
     "yourGamesYourWay": "Ваши игры – ваш путь",
     "createYourOwnGame": "Создайте свою игру",
     "createYourOwnGameSubtitle": "Вы можете создать игру только для себя."
+  },
+  "breadcrumbs": {
+    "games": "Игры",
+    "genres": "Жанры",
+    "home": "Главная",
+    "sitemap": "Карта сайта"
+  },
+  "labels": {
+    "currentlyPlaying": "Сейчас играют",
+    "enterToSearch": "Нажмите Enter для поиска",
+    "goAllGames": "Перейти ко всем играм",
+    "goDashboard": "Перейти в панель",
+    "goLibrary": "Перейти в библиотеку",
+    "latestInLibrary": "Последние игры в вашей библиотеке",
+    "navigation": "Навигация",
+    "search": "Поиск",
+    "searchToAdd": "Найдите что добавить",
+    "sortingBy": "Сортировка",
+    "toClose": "закрыть",
+    "toNavigate": "перемещаться",
+    "toSelect": "выбрать",
+    "viewGames": "Посмотреть игры",
+    "viewGenres": "Посмотреть жанры",
+    "yourGames": "Ваши игры",
+    "newJournalEntry": "Новая запись журнала",
+    "title": "Название",
+    "additionalInfo": "Дополнительная информация",
+    "toggleDarkMode": "Переключить темную тему"
+  },
+  "menu": {
+    "allGames": "Все игры",
+    "community": "Сообщество",
+    "dashboard": "Панель",
+    "explore": "Исследовать",
+    "favorites": "Избранное",
+    "genres": "Жанры",
+    "library": "Библиотека",
+    "librarySync": "Синхронизация библиотеки",
+    "pinned": "Закрепленные",
+    "yourLists": "Ваши списки",
+    "journal": "Журнал"
+  },
+  "placeholders": {
+    "search": "Поиск...",
+    "searchAnything": "Искать что угодно…",
+    "searchByName": "Поиск по названию...",
+    "searchCommand": "Ищите игру, жанр или команду..."
+  },
+  "tooltips": {
+    "close": "Закрыть",
+    "configure": "Настроить",
+    "createList": "Создать список",
+    "joinDiscord": "Присоединяйтесь в Discord",
+    "randomGame": "Случайная игра из списка",
+    "runViaSteam": "Запустить через Steam",
+    "showGrid": "Показать сеткой",
+    "showList": "Показать списком",
+    "showMenu": "Показать меню Backlog",
+    "steamHomepage": "Ссылка на Steam"
+  },
+  "messages": {
+    "dataNotFound": "Данные не найдены",
+    "dataNotFoundSubtitle": "К сожалению, мы не нашли запрошенные данные.",
+    "loading": "Загрузка...",
+    "loadingAccount": "Загружаем ваш аккаунт...",
+    "loadingList": "Загрузка списка"
   }
 }

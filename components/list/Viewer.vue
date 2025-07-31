@@ -25,7 +25,7 @@
     <div v-if="ui.showSearch" class="col-11">
       <v-text-field
         v-model="f.string"
-        placeholder="Search by name..."
+        :placeholder="$t('placeholders.searchByName')"
         clearable
         density="comfortable"
         @update:model-value="search">
@@ -36,7 +36,7 @@
     </div>
     <div class="col-auto">
       <v-btn id="⚓sortby" variant="text" size="small" color="blue-grey-lighten-1">
-        Sorting by
+        {{ $t('labels.sortingBy') }}
         <strong class="ps-1">
           {{ sortLabel[f.sortBy] ?? '...' }}
           {{ !f.sortBy || !f.sortDir ? '' : f.sortDir == 'asc' ? '(Asc)' : '(Desc)' }}
@@ -58,7 +58,7 @@
 
     <div class="col-auto ms-auto">
       <v-btn
-        v-tippy="'Show results as list'"
+        v-tippy="$t('tooltips.showList')"
         icon
         size="small"
         variant="text"
@@ -68,7 +68,7 @@
       </v-btn>
 
       <v-btn
-        v-tippy="'Show results as grid'"
+        v-tippy="$t('tooltips.showGrid')"
         icon
         size="small"
         variant="text"

@@ -22,14 +22,16 @@
         aria-autocomplete="list"
         role="combobox"
         aria-expanded="true"
-        placeholder="Search for a game, genre, or command..."
+        :placeholder="$t('placeholders.searchCommand')"
         @keyup="search" />
     </template>
     <template #body>
       <Command.List>
-        <Command.Empty>No results found.</Command.Empty>
+        <Command.Empty>{{ $t('messages.nothingFound') }}</Command.Empty>
 
-        <Command.Group v-if="ui.tab == null && _navigation.length" heading="Navigation">
+        <Command.Group
+          v-if="ui.tab == null && _navigation.length"
+          :heading="$t('labels.navigation')">
           <Command.Item
             v-for="(item, i) in _navigation"
             :key="'goTo' + i"
@@ -40,7 +42,9 @@
           </Command.Item>
         </Command.Group>
 
-        <Command.Group v-if="ui.tab == null && searchString.length == 0" heading="Search">
+        <Command.Group
+          v-if="ui.tab == null && searchString.length == 0"
+          :heading="$t('labels.search')">
           <Command.Item
             v-for="(item, i) in toSearch"
             :key="'search' + i"
@@ -56,7 +60,7 @@
           v-if="
             _genres.length && (ui.tab == 'genres' || (!ui.tab && searchString.length > 0))
           "
-          heading="Genres">
+          :heading="$t('pages.genres')">
           <Command.Item
             v-for="item in _genres"
             :key="'genre' + item.id"
@@ -71,7 +75,7 @@
           v-if="
             _games.length && (ui.tab == 'games' || (!ui.tab && searchString.length > 0))
           "
-          :heading="ui.tab == 'games' ? '' : 'Games'">
+          :heading="ui.tab == 'games' ? '' : $t('pages.games')">
           <Command.Item
             v-for="(item, i) in _games"
             :key="'game' + i"
@@ -134,7 +138,7 @@
               </g>
             </svg>
           </span>
-          <span class="command-palette-Label">to select</span>
+          <span class="command-palette-Label">{{ $t('labels.toSelect') }}</span>
         </li>
         <li>
           <span class="v-kbd">
@@ -161,7 +165,7 @@
               </g>
             </svg>
           </span>
-          <span class="command-palette-Label">to navigate</span>
+          <span class="command-palette-Label">{{ $t('labels.toNavigate') }}</span>
         </li>
         <li>
           <span class="v-kbd">
@@ -177,7 +181,7 @@
               </g>
             </svg>
           </span>
-          <span class="command-palette-Label">to close</span>
+          <span class="command-palette-Label">{{ $t('labels.toClose') }}</span>
         </li>
       </ul>
     </template>
@@ -225,28 +229,28 @@ export default {
 
       navigation: [
         {
-          label: 'Go to dashboard',
+          label: $t('labels.goDashboard'),
           goto: '/dashboard',
         },
         {
-          label: 'Go to all games',
+          label: $t('labels.goAllGames'),
           goto: '/games',
         },
 
         {
-          label: 'Go to your library',
+          label: $t('labels.goLibrary'),
           goto: '/library',
         },
       ],
 
       toSearch: [
         {
-          label: 'View games',
+          label: $t('labels.viewGames'),
           icon: 'Search',
           tab: 'games',
         },
         {
-          label: 'View genres',
+          label: $t('labels.viewGenres'),
           icon: 'Triangle',
           tab: 'genres',
         },
@@ -254,7 +258,7 @@ export default {
 
       preferences: [
         {
-          label: 'Toggle Dark Mode',
+          label: $t('labels.toggleDarkMode'),
           shortcut: ['⇧', 'D'],
         },
       ],

@@ -6,6 +6,7 @@
     "getStarted": "Get started",
     "importLibrary": "Import your library",
     "searchAllGames": "Search in all games",
+    "viewAll": "View all",
     "addGamePlaceholder": "Add a game \"{title}\" to your library"
   },
   "home": {
@@ -49,5 +50,71 @@
     "yourGamesYourWay": "Your games, your way",
     "createYourOwnGame": "Create your own game",
     "createYourOwnGameSubtitle": "You can just create a game for yourself."
+  },
+  "breadcrumbs": {
+    "games": "Games",
+    "genres": "Genres",
+    "home": "Home",
+    "sitemap": "Sitemap"
+  },
+  "labels": {
+    "currentlyPlaying": "Currently playing",
+    "enterToSearch": "Enter to search",
+    "goAllGames": "Go to all games",
+    "goDashboard": "Go to dashboard",
+    "goLibrary": "Go to your library",
+    "latestInLibrary": "Latest games in your library",
+    "navigation": "Navigation",
+    "search": "Search",
+    "searchToAdd": "Search something to add",
+    "sortingBy": "Sorting by",
+    "toClose": "to close",
+    "toNavigate": "to navigate",
+    "toSelect": "to select",
+    "viewGames": "View games",
+    "viewGenres": "View genres",
+    "yourGames": "Your games",
+    "newJournalEntry": "New journal entry",
+    "title": "Title",
+    "additionalInfo": "Additional info",
+    "toggleDarkMode": "Toggle Dark Mode"
+  },
+  "menu": {
+    "allGames": "All games",
+    "community": "Community",
+    "dashboard": "Dashboard",
+    "explore": "Explore",
+    "favorites": "Favorites",
+    "genres": "Genres",
+    "library": "Library",
+    "librarySync": "Library sync",
+    "pinned": "Pinned",
+    "yourLists": "Your lists",
+    "journal": "Journal"
+  },
+  "placeholders": {
+    "search": "Search...",
+    "searchAnything": "Search anything…",
+    "searchByName": "Search by name...",
+    "searchCommand": "Search for a game, genre, or command..."
+  },
+  "tooltips": {
+    "close": "Close",
+    "configure": "Configure",
+    "createList": "Create a new list",
+    "joinDiscord": "Join us at Discord",
+    "randomGame": "Get a random game from this list",
+    "runViaSteam": "Run via Steam",
+    "showGrid": "Show results as grid",
+    "showList": "Show results as list",
+    "showMenu": "Show Backlog menu",
+    "steamHomepage": "Link to the Steam Homepage"
+  },
+  "messages": {
+    "dataNotFound": "Data Not Found",
+    "dataNotFoundSubtitle": "Sorry, we couldn't find the data you're looking for.",
+    "loading": "Loading...",
+    "loadingAccount": "Loading your account, please wait...",
+    "loadingList": "Loading list"
   }
 }

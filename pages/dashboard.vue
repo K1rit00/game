@@ -3,8 +3,8 @@
     <div class="container-xl">
       <div class="row g-2 align-items-center">
         <div class="col">
-          <div class="page-pretitle">Your games</div>
-          <h1 class="page-title">Dashboard</h1>
+          <div class="page-pretitle">{{ $t('labels.yourGames') }}</div>
+          <h1 class="page-title">{{ $t('menu.dashboard') }}</h1>
           <!-- <p class="text-muted">Find games, apps, and more...</p> -->
         </div>
       </div>
@@ -74,12 +74,12 @@
         </div>
 
         <div v-if="db.recent.length" class="col-12">
-          <h2 class="pb-0 mb-0">Currently playing</h2>
+          <h2 class="pb-0 mb-0">{{ $t('labels.currentlyPlaying') }}</h2>
           <gameList :apps="playing" cols="3" class="pt-3"></gameList>
         </div>
 
         <div v-if="db.recent.length" class="col-12">
-          <h2 class="pb-0 mb-0">Latest games in your library</h2>
+          <h2 class="pb-0 mb-0">{{ $t('labels.latestInLibrary') }}</h2>
           <gameList :apps="db.recent" cols="3" class="pt-3"></gameList>
         </div>
 
@@ -149,7 +149,7 @@
 
               <div class="row">
                 <div class="col-auto">
-                  <div class="btn btn-sm btn-secondary">View all</div>
+                  <div class="btn btn-sm btn-secondary">{{ $t('buttons.viewAll') }}</div>
                 </div>
                 <div class="col-12">
                   <gameList

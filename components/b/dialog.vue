@@ -25,7 +25,7 @@
           <button
             type="button"
             class="btn-close"
-            aria-label="Close"
+            :aria-label="$t('tooltips.close')"
             @click="hide"></button>
         </div>
 
