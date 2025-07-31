@@ -88,7 +88,7 @@
               <NuxtLink to="/import" class="nav-link">
                 <span class="nav-link-title text-orange">
                   <Icon>StepInto</Icon>
-                  Import library
+                  {{ $t('nav.importLibrary') }}
                 </span>
               </NuxtLink>
             </li>
